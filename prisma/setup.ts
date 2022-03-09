@@ -1,9 +1,9 @@
-import { PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient({ log: ['query', 'error', 'warn', 'info']})
 
 
-const hobbies = [
+const hobbies: Prisma.HobbyCreateInput[] = [
     { 
        name: "Cycling",
        image: "https://static.toiimg.com/thumb/85201540.cms?width=680&height=512&imgsize=989394", 
@@ -20,7 +20,7 @@ const hobbies = [
           active: true
     }
 ]
-const users = [
+const users: Prisma.UserCreateInput [] = [
     {
         
         fullName: "Artiola Caka",
